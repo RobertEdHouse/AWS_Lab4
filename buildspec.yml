@@ -26,15 +26,15 @@ phases:
     commands:
       - echo Publish started on `date`
 
-artifacts:
-  files:
-    - '**/*'
-  base-directory: 'build_output/'
-  discard-paths: no
-
 reports:
   ${PROJECT}:
     file-format: VisualStudioTrx
     files:
       - test_report.xml
-    base-directory: 'testresults'
+    base-directory: './testresults'
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'build_output/'
+
