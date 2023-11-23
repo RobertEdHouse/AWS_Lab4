@@ -18,9 +18,9 @@ phases:
       
   build:
     commands:
-      - echo Build started on `date`
-      - dotnet build -c Release
-      - dotnet test -c Release --logger trx --results-directory ./testresults
+      - echo Build started on 'date'
+      - dotnet build -c Test_Lab4
+      - dotnet test -c Test_Lab4 --logger trx --results-directory testresults
       
   post_build:
     commands:
