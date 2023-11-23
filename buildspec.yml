@@ -20,7 +20,7 @@ phases:
     commands:
       - echo Build started on 'date'
       - dotnet build -c Release
-      - dotnet test -c Release --logger "xml;LogFileName=test_results.xml" --results-directory testresults
+      - dotnet test -c Release --logger "trx;LogFileName=test_results.trx" --results-directory testresults
       
   post_build:
     commands:
@@ -29,7 +29,7 @@ phases:
 
 reports:
   ${PROJECT}:
-    file-format: JUNITXML
+    file-format: VisualStudioTrx
     files:
       - 'test_results.trx'
     base-directory: './testresults'
