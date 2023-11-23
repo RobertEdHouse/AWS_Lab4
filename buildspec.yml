@@ -26,13 +26,14 @@ phases:
     commands:
       - echo Publish started on `date`
       - echo $CODEBUILD_SRC_DIR
+      - ls -al
 
 reports:
   ${PROJECT}:
     file-format: VisualStudioTrx
     files:
       - test_report.xml
-    base-directory: './testresults'
+    base-directory: './report'
 
 artifacts:
   files:
