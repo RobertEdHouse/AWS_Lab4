@@ -25,16 +25,13 @@ phases:
   post_build:
     commands:
       - echo Publish started on `date`
-      - echo $CODEBUILD_SRC_DIR
-      - ls -al
+      - touch test_report.xml
 
 reports:
   ${PROJECT}:
     file-format: VisualStudioTrx
     files:
       - test_report.xml
-    base-directory: './report'
-    discard-paths: no
 
 artifacts:
   files:
