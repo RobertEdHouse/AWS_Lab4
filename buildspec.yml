@@ -25,13 +25,13 @@ phases:
   post_build:
     commands:
       - echo Publish started on `date`
-      - dotnet publish -c Release  -r linux-x64 -o ./build_output ./${PROJECT}/${PROJECT}.csproj --self-contained false
-      - cp Procfile ./build_output
+      - dotnet publish -c Release  -r linux-x64 -o build_output/ ./${PROJECT}/${PROJECT}.csproj --self-contained false
+      - cp Procfile build_output/
 
 artifacts:
   files:
     - '**/*'
-  base-directory: ./build_output
+  base-directory: build_output/
   discard-paths: no
 
 reports:
@@ -39,4 +39,4 @@ reports:
     file-format: VisualStudioTrx
     files:
       - test_report.xml
-    base-directory: './testresults'
+    base-directory: 'testresults/'
