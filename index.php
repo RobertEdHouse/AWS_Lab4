@@ -1,6 +1,7 @@
  <?php
-    $xmlData = simplexml_load_file("./testresults/test_report.xml") 
-        or die("Unable to load the xml.");
+    $content = file_get_contents("./testresults/*.trx");
+    $xmlData = simplexml_load_file($content) 
+        or die("Unable to load the report.");
     echo '<pre>';
     print_r($xmlData);
     echo '</pre>';
