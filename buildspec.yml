@@ -31,10 +31,8 @@ reports:
     file-format: VisualStudioTrx
     files:
       - test_report.xml
-    base-directory: './testresults'
 
 artifacts:
   files:
     - '**/*'
-  base-directory: 'build_output/'
 
