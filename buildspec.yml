@@ -37,4 +37,4 @@ reports:
     file-format: VisualStudioTrx
     files:
       - test_report.xml
-    base-directory: 'testresults/'
+    base-directory: 'testresults'
