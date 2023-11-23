@@ -1,9 +1,8 @@
  <?php
-    $content = file_get_contents("./testresults/test_results.trx");
-    print_r($content);
-    $xmlData = simplexml_load_file($content) 
+    $content = readfile("./testresults/test_results.trx")
         or die("Unable to load the report.");
     echo '<pre>';
-    print_r($xmlData);
+    print_r("Результат виконання тестів:");
+    print_r($content);
     echo '</pre>';
 ?>
