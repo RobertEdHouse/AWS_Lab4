@@ -25,6 +25,7 @@ phases:
   post_build:
     commands:
       - echo Publish started on `date`
+      - echo $CODEBUILD_SRC_DIR
 
 reports:
   ${PROJECT}:
