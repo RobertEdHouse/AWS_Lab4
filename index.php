@@ -3,6 +3,5 @@
 
     $text= file_get_contents($file_path);
     echo $text;
-echo 'Результати тестів';
 
 ?>
