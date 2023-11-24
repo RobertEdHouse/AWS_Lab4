@@ -1,12 +1,9 @@
  <?php
-    $file = fopen("./testresults/test_results.trx", 'r');
+    $filename = './testresults/test_results.trx';
+    $file = fopen($filename, 'rb');
 
-    $bytesToRead = 16384;
-
-    $content = fread($file, $bytesToRead);
-    echo '<pre>'
+    $content = fread($file, filesize($filename));
     echo $content;
 
     fclose($file);
-    echo '</pre>';
 ?>
