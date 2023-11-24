@@ -1,4 +1,3 @@
-# AWS CodeBuild spec to build an Elastic Beanstalk artifact for AWS CodePipeline to deploy
 version: 0.2
     
 env:
@@ -25,7 +24,6 @@ phases:
   post_build:
     commands:
       - echo Publish started on `date`
-      - touch test_report.xml
 
 reports:
   ${PROJECT}:
