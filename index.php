@@ -1,9 +1,9 @@
  <?php
     $filename = './testresults/test_results.trx';
-    $file = fopen($filename, 'rb');
 
-    $content = fread($file, filesize($filename));
+    $content = simplexml_load_file($filename);
+    echo '<pre>';
     echo $content;
+    echo '</pre>';
 
-    fclose($file);
 ?>
